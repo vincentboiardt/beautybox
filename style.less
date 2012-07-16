@@ -1,0 +1,203 @@
+/*!
+Theme Name: Beautybox
+Version: 1.0
+Author: Vincent Boiardt
+*/
+@import "css/elements.less";
+@import "css/basic.less";
+
+@background: #f6f6f6;
+@accent: #ffd8f7;
+
+/* Fonts */
+
+@font-face {
+    font-family: 'QlassikMediumRegular';
+    src: url('css/fonts/Qlassik_TB-webfont.eot');
+    src: url('css/fonts/Qlassik_TB-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/Qlassik_TB-webfont.woff') format('woff'),
+         url('css/fonts/Qlassik_TB-webfont.ttf') format('truetype'),
+         url('css/fonts/Qlassik_TB-webfont.svg#QlassikMediumRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'QlassikBoldRegular';
+    src: url('css/fonts/QlassikBold_TB-webfont.eot');
+    src: url('css/fonts/QlassikBold_TB-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/fonts/QlassikBold_TB-webfont.woff') format('woff'),
+         url('css/fonts/QlassikBold_TB-webfont.ttf') format('truetype'),
+         url('css/fonts/QlassikBold_TB-webfont.svg#QlassikBoldRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Type */
+
+body {
+	font: 0.625em/1.5 Arial, Helvetica, sans-serif;
+	color: #555;
+}
+
+a {
+	color: #888;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+h1 {
+	color: #888;
+	font: 3.6em/1 'QlassikBoldRegular', Arial, Helvetica, sans-serif;
+	margin: 0 0 20px;
+}
+
+h2 {
+	color: #888;
+	font: 2em/1 'QlassikBoldRegular', Arial, Helvetica, sans-serif;
+	margin: 0 0 10px;
+}
+
+.document ul,
+.document ol,
+p {
+	font-size: 1.6em;
+	margin: 0 0 1.5em;
+}
+
+.document ul {
+	list-style: disc;
+	margin-left: 20px;
+}
+
+.document ol {
+	list-style: decimal;
+	margin-left: 20px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+/* Layout */
+
+body {
+	border-top: 5px solid @accent;
+}
+
+.inner {
+	padding: 0 30px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Header */
+
+header {
+	background: @background;
+	border-bottom: 1px solid #ccc;
+	padding: 30px 0 0;
+	margin: 0 0 30px;
+	.drop-shadow( 0, 2px, 5px, .1);
+	
+	h1 {
+		margin: 0 0 10px;
+		
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	
+	nav {
+		font-size: 1.6em;
+		line-height: 32px;
+		margin: 0 -30px;
+		
+		a {
+			display: block;
+			padding: 0 20px;
+			border-top: 1px solid #ccc;
+			.gradient( #eee, #eee, #fff );
+		}
+	}
+}
+
+@media all and (min-width: 640px) {
+	header {
+		padding-bottom: 10px;
+		border-color: #ddd;
+		
+		nav {
+			padding: 0 10px;
+			
+			li {
+				float: left;
+			}
+			
+			a {
+				float: left;
+				background: none;
+				border: none;
+			}
+		}
+	}
+}
+
+/* Page */
+
+@media all and (min-width: 640px) {
+	#main {
+		float: left;
+		width: 64%;
+		margin-right: 3%;
+	}
+}
+
+/* Sidebar */
+
+#sidebar {
+	margin: 0 -30px;
+	padding: 30px 30px 10px;
+	border-top: 1px solid #ccc;
+	background: @background;
+}
+
+@media all and (min-width: 640px) {
+	#sidebar {
+		float: left;
+		width: 33%;
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.module {
+		border-top: 5px solid @accent;
+		padding: 20px 0 0;
+		margin: 0 0 15px;
+		.rounded(5px);
+		
+		&:last-child {
+		}
+	}
+}
+
+/* Footer */
+
+footer {
+	padding: 20px 0;
+	background: #eee;
+	border-top: 1px solid #ccc;
+}
