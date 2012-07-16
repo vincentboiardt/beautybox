@@ -105,3 +105,19 @@ margin: 0 1em 1em 0;
 body {
 font: 0.625em/1.5 Arial, Helvetica, sans-serif;
 }
+
+/* Layout */
+
+.inner {
+padding: 0 20px;
+}
+
+header h1 {
+margin: 0 0 10px;
+}
+
+header h1 img {
+display: block;
+max-width: 100%;
+height: auto;
+}
