@@ -11,6 +11,10 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+	<?php $top_notice = get_option( 'bb_top_notice', '' ); ?> 
+	<?php if ( ! empty( $top_notice ) ) : ?>
+		<span id="top-notice"><?php echo esc_attr( $top_notice ); ?></span>
+	<?php endif; ?>
 	<header id="head">
 		<div class="inner">
 			<h1><a href="<?php echo home_url(); ?>" rel="home"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>

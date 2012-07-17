@@ -7,7 +7,17 @@ Author: Vincent Boiardt
 @import "css/basic.less";
 
 @background: #f6f6f6;
-@accent: #ffd8f7;
+@accent: #b34556;
+@accent2: #ce7c88;
+
+.accentbg {
+	position: relative;
+	color: #fff;
+	.gradient( #944154, #944154, #c95873);
+	border-bottom: 1px solid #632b38;
+	.drop-shadow( 0, 1px, 4px, .2);
+	z-index: 1;
+}
 
 /* Fonts */
 
@@ -52,13 +62,13 @@ a:hover {
 }
 
 h1 {
-	color: #888;
+	color: @accent;
 	font: 3.6em/1 'QlassikBoldRegular', Arial, Helvetica, sans-serif;
 	margin: 0 0 20px;
 }
 
 h2 {
-	color: #888;
+	color: @accent;
 	font: 2em/1 'QlassikBoldRegular', Arial, Helvetica, sans-serif;
 	margin: 0 0 10px;
 }
@@ -68,6 +78,14 @@ h2 {
 p {
 	font-size: 1.6em;
 	margin: 0 0 1.5em;
+}
+
+.leading {
+	color: @accent2;
+	font-family: 'QlassikMediumRegular';
+	font-size: 2.5em;
+	line-height: 1.2;
+	margin: 0 0 .5em;
 }
 
 .document ul {
@@ -88,22 +106,35 @@ em {
 	font-style: italic;
 }
 
-/* Layout */
-
-body {
-	border-top: 5px solid @accent;
+.map {
+	width: 100%;
+	height: 240px;
+	margin: 0 0 20px;
 }
+
+/* Layout */
 
 .inner {
 	padding: 0 30px;
 	max-width: 900px;
 	margin: 0 auto;
 }
+		
+img {
+	max-width: 100%;
+	height: auto;
+}
 
 /* Header */
 
+#top-notice {
+	display: block;
+	font: 2em/40px 'QlassikBoldRegular', Arial, Helvetica, sans-serif;
+	text-align: center;
+	.accentbg;
+}
+
 header {
-	background: @background;
 	border-bottom: 1px solid #ccc;
 	padding: 30px 0 0;
 	margin: 0 0 30px;
@@ -114,8 +145,6 @@ header {
 		
 		img {
 			display: block;
-			max-width: 100%;
-			height: auto;
 		}
 	}
 	
@@ -137,6 +166,10 @@ header {
 	header {
 		padding-bottom: 10px;
 		border-color: #ddd;
+		
+		h1 {
+			margin: 0 0 20px;
+		}
 		
 		nav {
 			padding: 0 10px;
@@ -181,15 +214,23 @@ header {
 		border: none;
 		padding: 0;
 		margin: 0;
-	}
-	
-	.module {
-		border-top: 5px solid @accent;
-		padding: 20px 0 0;
-		margin: 0 0 15px;
-		.rounded(5px);
 		
-		&:last-child {
+		p {
+			font-size: 1.4em;
+			margin: 0 0 1em;
+		}
+	
+		.module {
+			margin: 0 0 50px;
+			padding: 0 10px;
+			
+			h2 {
+				margin: 0 -10px 10px;
+				padding: 0 10px;
+				line-height: 32px;
+				.accentbg;
+				.border-radius(5px, 0, 0, 5px);
+			}
 		}
 	}
 }
@@ -200,4 +241,16 @@ footer {
 	padding: 20px 0;
 	background: #eee;
 	border-top: 1px solid #ccc;
+}
+
+@media all and (min-width: 640px) {
+	footer {
+		.copyright {
+			float: left;
+		}
+		
+		.widgets {
+			float: right;
+		}
+	}
 }
