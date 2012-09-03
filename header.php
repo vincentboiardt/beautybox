@@ -6,6 +6,7 @@
 <link href="<?php bloginfo( 'stylesheet_url' ); ?>" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="viewport" content="width = device-width">
 <script src="<?php bloginfo( 'template_directory' ); ?>/js/modernizr-2.5.3-min.js"></script>
 <?php wp_meta(); ?>
 <?php wp_head(); ?>
