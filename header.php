@@ -10,6 +10,7 @@
 <script src="<?php bloginfo( 'template_directory' ); ?>/js/modernizr-2.5.3-min.js"></script>
 <?php wp_meta(); ?>
 <?php wp_head(); ?>
+<meta property="og:image" content="<?php header_image(); ?>">
 </head>
 <body <?php body_class(); ?>>
 	<?php $top_notice = get_option( 'bb_top_notice', '' ); ?> 
