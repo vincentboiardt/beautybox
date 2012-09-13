@@ -20,6 +20,11 @@ Author: Vincent Boiardt
 	z-index: 1;
 }
 
+.alignleft {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
 /* Fonts */
 
 @font-face {
@@ -70,8 +75,8 @@ h1 {
 
 h2 {
 	color: @accent;
-	font: 2em/1 'QlassikBoldRegular', Arial, Helvetica, sans-serif;
-	margin: 0 0 10px;
+	font: 2.8em/1 'QlassikBoldRegular', Arial, Helvetica, sans-serif;
+	margin: 0 0 20px;
 }
 
 .document ul,
@@ -86,7 +91,7 @@ p {
 	font-family: 'QlassikMediumRegular';
 	font-size: 2.5em;
 	line-height: 1.2;
-	margin: 0 0 .5em;
+	margin: 0 0 2em;
 }
 
 .document ul {
@@ -97,6 +102,10 @@ p {
 .document ol {
 	list-style: decimal;
 	margin-left: 20px;
+}
+
+.document li {
+	margin: 0 0 10px;
 }
 
 strong {
@@ -160,6 +169,11 @@ header {
 			border-top: 1px solid #ccc;
 			.gradient( #eee, #eee, #fff );
 		}
+		
+		.current_page_item a {
+			color: #fff;
+			.gradient( #ccc, #ccc, #ddd );
+		}
 	}
 }
 
@@ -181,8 +195,12 @@ header {
 			
 			a {
 				float: left;
-				background: none;
+				background: none !important;
 				border: none;
+			}
+			
+			.current_page_item a {
+				color: #000;
 			}
 		}
 	}
@@ -213,6 +231,10 @@ header {
 	
 	.module {
 		margin: 0 0 50px;
+		
+		h2 {
+			font-size: 2em;
+		}
 	}
 }
 

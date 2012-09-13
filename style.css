@@ -188,6 +188,10 @@ q {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+.alignleft {
+  float: left;
+  margin: 0 20px 20px 0;
+}
 /* Fonts */
 @font-face {
   font-family: 'QlassikMediumRegular';
@@ -222,8 +226,8 @@ h1 {
 }
 h2 {
   color: #46a0a0;
-  font: 2em/1 'QlassikBoldRegular', Arial, Helvetica, sans-serif;
-  margin: 0 0 10px;
+  font: 2.8em/1 'QlassikBoldRegular', Arial, Helvetica, sans-serif;
+  margin: 0 0 20px;
 }
 .document ul,
 .document ol,
@@ -236,7 +240,7 @@ p {
   font-family: 'QlassikMediumRegular';
   font-size: 2.5em;
   line-height: 1.2;
-  margin: 0 0 .5em;
+  margin: 0 0 2em;
 }
 .document ul {
   list-style: disc;
@@ -245,6 +249,9 @@ p {
 .document ol {
   list-style: decimal;
   margin-left: 20px;
+}
+.document li {
+  margin: 0 0 10px;
 }
 strong {
   font-weight: bold;
@@ -313,6 +320,13 @@ header nav a {
   background: -ms-linear-gradient(bottom, #eeeeee, #ffffff);
   background: -moz-linear-gradient(center bottom, #eeeeee 0%, #ffffff 100%);
 }
+header nav .current_page_item a {
+  color: #fff;
+  background: #cccccc;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cccccc), color-stop(1, #dddddd));
+  background: -ms-linear-gradient(bottom, #cccccc, #dddddd);
+  background: -moz-linear-gradient(center bottom, #cccccc 0%, #dddddd 100%);
+}
 @media all and (min-width: 640px) {
   header {
     padding-bottom: 10px;
@@ -329,8 +343,11 @@ header nav a {
   }
   header nav a {
     float: left;
-    background: none;
+    background: none !important;
     border: none;
+  }
+  header nav .current_page_item a {
+    color: #000;
   }
 }
 /* Page */
@@ -354,6 +371,9 @@ header nav a {
 }
 #sidebar .module {
   margin: 0 0 50px;
+}
+#sidebar .module h2 {
+  font-size: 2em;
 }
 @media all and (min-width: 640px) {
   #sidebar {
